@@ -1,0 +1,18 @@
+account_balance = 1000
+print("Welcome to the ATM!")
+while True:
+    option = input("Choose an option (1: Check Balance, 2: Withdraw, 3: Exit): ")
+    if option == '1':
+        print(f"Your account balance is Rs. {account_balance}.")
+    elif option == '2':
+        amount = float(input("Enter the withdrawal amount: "))
+        if amount <= account_balance:
+            account_balance -= amount
+            print(f"Withdrawn Rs. {amount}. New balance: Rs. {account_balance}")
+        else:
+            print("Insufficient funds.")
+    elif option == '3':
+        print("Thank you for using the ATM.")
+        break
+    else:
+        print("Invalid option. Please choose 1, 2, or 3.")
